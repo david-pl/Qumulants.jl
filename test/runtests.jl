@@ -9,6 +9,7 @@ names = [
     "test_mixed-order.jl"
     "test_correlation.jl"
     "test_two-level-laser.jl"
+    "test_symmetrize.jl"
     "test_cluster.jl"
     "test_scaling.jl"
     "test_higher-order.jl"

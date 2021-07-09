@@ -14,6 +14,11 @@ end
 Base.show(io::IO,x::QSym) = write(io, x.name)
 Base.show(io::IO,x::Create) = write(io, string(x.name, "′"))
 Base.show(io::IO,x::Transition) = write(io, Symbol(x.name,x.i,x.j))
+function Base.show(io::IO,x::Symmetrized)
+    write(io, "S(")
+    show(io, x.operator)
+    write(io, ")")
+end
 
 show_brackets = Ref(true)
 function Base.show(io::IO,x::QTerm)
